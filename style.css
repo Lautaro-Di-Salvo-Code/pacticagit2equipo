@@ -22,15 +22,40 @@ html{
     font-size:16px;
     font-family: "Overpass", sans-serif;
 }
+img{
+    height: auto;
 
+}
 /*  Estilos Justin NavBar y footer*/
 /* Estilos Erik  body superior*/
 
 
 
 /* Estilos Lautaro  body inferior*/
-
-
+.section-article__backgroundPhones{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: var(--maximo-ancho);
+    margin: auto;
+}
+.article-background__phones{
+    background-image: url("/images/bg-pattern-circles.svg");
+    height: 78vh;
+    background-position: center;
+    background-size: cover;
+}
+.article-background__phones img{
+    max-width: 85%;
+    
+    margin: auto;
+}
+.article__stateOfTheArtsection{
+    
+}
+.article__stateOfTheArtsection p{
+    max-width: 28rem;
+}
 
 
 
