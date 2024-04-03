@@ -1,39 +1,140 @@
-:root{
-    --color1:hsl(356, 100%, 66%);
-    --color2:hsl(355, 100%, 74%);
-    --color3:hsl(208, 49%, 24%);
-    --color4:hsl(0, 0%, 100%);
-    --color5:hsl(240, 2%, 79%);
-    --color6:hsl(240, 10%, 16%);
-    --color7:hsl(13, 100%, 72%);
-    --color8:hsl(353, 100%, 62%);
-    --color9:hsl(237, 17%, 21%);
-    --color10:hsl(237, 23%, 32%);
-    --minimo-ancho:375px;
-    --maximo-ancho:1440px;
-    --anchoLetraMuydelgada:300;
-    --anchoLetradelgada:400;
-    --anchoLetraMediana:500;
-    --anchoLetraAncha:600;
-    --anchoLetraMuyAncha:700;
-    --otra-fuenteLetra:  "Ubuntu", sans-serif;
+:root {
+	--color1: hsl(356, 100%, 66%);
+	--color2: hsl(355, 100%, 74%);
+	--color3: hsl(208, 49%, 24%);
+	--color4: hsl(0, 0%, 100%);
+	--color5: hsl(240, 2%, 79%);
+	--color6: hsl(240, 10%, 16%);
+	--color7: hsl(13, 100%, 72%);
+	--color8: hsl(353, 100%, 62%);
+	--color9: hsl(237, 17%, 21%);
+	--color10: hsl(237, 23%, 32%);
+	--minimo-ancho: 375px;
+	--maximo-ancho: 1440px;
+	--anchoLetraMuydelgada: 300;
+	--anchoLetradelgada: 400;
+	--anchoLetraMediana: 500;
+	--anchoLetraAncha: 600;
+	--anchoLetraMuyAncha: 700;
+	--otra-fuenteLetra: 'Ubuntu', sans-serif;
 }
-html{
-    font-size:16px;
-    font-family: "Overpass", sans-serif;
+/* Reset CSS */
+html {
+	box-sizing: border-box;
+	font-family: var(--font);
+	font-size: 16px;
+	font-family: 'Overpass', sans-serif;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	overflow-x: hidden;
+}
+
+h1 {
+	margin: 0;
+	font-size: 2rem;
+}
+
+h2 {
+	margin: 0;
+	font-size: 1.5rem;
+}
+
+h3 {
+	margin: 0;
+	font-size: 1.25rem;
+}
+
+h4 {
+	margin: 0;
+	font-size: 1rem;
+}
+
+h5 {
+	margin: 0;
+	font-size: 0.85rem;
+}
+
+h6 {
+	margin: 0;
+	font-size: 0.7rem;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+p {
+	margin: 0;
+	line-height: 1.6;
+}
+
+ul,
+li {
+	padding: 0;
+	list-style: none;
+}
+
+/*Utilidades*/
+
+.align-center {
+	display: flex;
+	align-items: center;
+}
+
+.button {
+	margin: 0;
+	padding: 0.8rem 2rem;
+	font-size: 1rem;
+	border-radius: 2rem;
+	border: none;
+	background-color: transparent;
+	color: var(--color4);
 }
 
 /*  Estilos Justin NavBar y footer*/
+
+.nav {
+	background-color: black;
+	padding: 0 10rem;
+	position: absolute;
+	width: 100%;
+	gap: 2rem;
+}
+
+.nav__container {
+	width: 100%;
+	justify-content: space-between;
+
+	& .nav__list {
+		gap: 2rem;
+
+		& .nav__item {
+			gap: 0.5rem;
+			color: var(--color4);
+		}
+	}
+
+	& .nav__auth {
+		gap: 0.5rem;
+
+		& .btn-sing-up {
+			background-color: white;
+			color: var(--color1);
+			font-weight: bold;
+		}
+	}
+}
+
 /* Estilos Erik  body superior*/
 
-
-
 /* Estilos Lautaro  body inferior*/
-
-
-
-
-
-
-
-
