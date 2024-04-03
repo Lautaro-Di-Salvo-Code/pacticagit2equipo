@@ -1,60 +1,196 @@
-:root{
-    --color1:hsl(356, 100%, 66%);
-    --color2:hsl(355, 100%, 74%);
-    --color3:hsl(208, 49%, 24%);
-    --color4:hsl(0, 0%, 100%);
-    --color5:hsl(240, 2%, 79%);
-    --color6:hsl(240, 10%, 16%);
-    --color7:hsl(13, 100%, 72%);
-    --color8:hsl(353, 100%, 62%);
-    --color9:hsl(237, 17%, 21%);
-    --color10:hsl(237, 23%, 32%);
-    --minimo-ancho:375px;
-    --maximo-ancho:1440px;
-    --anchoLetraMuydelgada:300;
-    --anchoLetradelgada:400;
-    --anchoLetraMediana:500;
-    --anchoLetraAncha:600;
-    --anchoLetraMuyAncha:700;
-    --otra-fuenteLetra:  "Ubuntu", sans-serif;
+:root {
+	--color1: #ff525d;
+	--color2: #ff7a85;
+	--color3: #1f3f5b;
+	--color4: rgb(255, 255, 255);
+	--color5: #c8c8cb;
+	--color6: #25252d;
+	--color7: #ff8f70;
+	--color8: #ff3d54;
+	--color9: #2c2d3f;
+	--color10: #3f4164;
+	--minimo-ancho: 375px;
+	--maximo-ancho: 1440px;
+	--anchoLetraMuydelgada: 300;
+	--anchoLetradelgada: 400;
+	--anchoLetraMediana: 500;
+	--anchoLetraAncha: 600;
+	--anchoLetraMuyAncha: 700;
+	--otra-fuenteLetra: 'Ubuntu', sans-serif;
 }
-html{
-    font-size:16px;
-    font-family: "Overpass", sans-serif;
+
+/* #2c2d3f */
+/* #3f4164 */
+
+
+/* Reset CSS */
+html {
+	box-sizing: border-box;
+	font-family: var(--font);
+	font-size: 16px;
+	font-family: 'Overpass', sans-serif;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	overflow-x: hidden;
+}
+
+h1 {
+	margin: 0;
+	font-size: 2rem;
+}
+
+h2 {
+	margin: 0;
+	font-size: 1.5rem;
+}
+
+h3 {
+	margin: 0;
+	font-size: 1.25rem;
+}
+
+h4 {
+	margin: 0;
+	font-size: 1rem;
+}
+
+h5 {
+	margin: 0;
+	font-size: 0.85rem;
+}
+
+h6 {
+	margin: 0;
+	font-size: 0.7rem;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+p {
+	margin: 0;
+	line-height: 1.6;
+}
+
+ul,
+li {
+	padding: 0;
+	list-style: none;
+}
+
+/*Utilidades*/
+
+.align-center {
+	display: flex;
+	align-items: center;
+}
+
+.button {
+	margin: 0;
+	padding: 0.8rem 2rem;
+	font-size: 1rem;
+	border-radius: 2rem;
+	border: none;
+	background-color: transparent;
+	color: var(--color4);
 }
 img{
     height: auto;
 
 }
 /*  Estilos Justin NavBar y footer*/
+
+.nav {
+	background-color: black;
+	padding: 0 10rem;
+	position: absolute;
+	width: 100%;
+	gap: 2rem;
+}
+
+.nav__container {
+	width: 100%;
+	justify-content: space-between;
+
+	& .nav__list {
+		gap: 2rem;
+
+		& .nav__item {
+			gap: 0.5rem;
+			color: var(--color4);
+		}
+	}
+
+	& .nav__auth {
+		gap: 0.5rem;
+
+		& .btn-sing-up {
+			background-color: white;
+			color: var(--color1);
+			font-weight: bold;
+		}
+	}
+}
+
 /* Estilos Erik  body superior*/
 
-
-
 /* Estilos Lautaro  body inferior*/
+.bg-gradient{
+    background: linear-gradient(89deg, #2c2d3f 0%, #3f4164 68%);
+    border-top-right-radius: 10rem;
+    border-bottom-left-radius: 10rem;
+
+}
 .section-article__backgroundPhones{
+    /* background-color: var(--color9) ; */
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     max-width: var(--maximo-ancho);
-    margin: auto;
+    margin: 10rem auto;
+    
+    height: 53vh;
+    background-image: url("/images/bg-pattern-circles.svg");
+    background-position: center;
+    background-position-x: -12rem;
+    background-position-y: -32rem;
+    background-repeat: no-repeat;
+    background-size: 61rem;
 }
 .article-background__phones{
-    background-image: url("/images/bg-pattern-circles.svg");
-    height: 78vh;
-    background-position: center;
-    background-size: cover;
-}
-.article-background__phones img{
-    max-width: 85%;
+
+    & img{
+        min-width: 78%;
+        position: relative;
+        top: -5rem;
+        margin: auto;
+    }
     
-    margin: auto;
+    
 }
 .article__stateOfTheArtsection{
+    margin: 5rem 0;
+    & h2{
+        font-weight: var(--anchoLetraAncha);
+        color:var(--color4) ;
+        font-size: 36px;
+    }
     
-}
-.article__stateOfTheArtsection p{
-    max-width: 28rem;
+    & p{
+        max-width: 33rem;
+        color:var(--color5) ;
+    }
 }
 
 
